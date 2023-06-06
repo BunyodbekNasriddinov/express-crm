@@ -1,6 +1,7 @@
 import { Router } from "express";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
+import 'dotenv/config.js'
 
 const PORT = process.env.PORT;
 
