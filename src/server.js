@@ -13,7 +13,7 @@ import errorHandler from "./middlewares/errorHandler.js";
 // all routes import
 import allRoutes from "./routes/all.routes.js";
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 const app = express();
 
 // setup
