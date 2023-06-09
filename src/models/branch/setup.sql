@@ -1,0 +1,1 @@
+INSERT INTO branch (branch_name, branch_phone, branch_address) VALUES ('Chilonzor', '+998909991234', 'Chilonzor k. Qatortol m.')
