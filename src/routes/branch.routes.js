@@ -6,3 +6,5 @@ const router = Router();
 
 router.get("/branches", checkToken, ALL_BRANCH);
 router.post("/branch/new", checkToken, NEW_BRANCH);
+
+export default router;

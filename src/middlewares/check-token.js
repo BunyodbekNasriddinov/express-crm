@@ -3,7 +3,7 @@ import jwt from "../utils/jwt.js";
 
 export default (req, res, next) => {
   try {
-    if (req.headers?.token)
+    if (!req.headers?.token)
       return next(new AuthorizationError("Token required"));
 
     if (jwt.verify(req.headers?.token)) {
