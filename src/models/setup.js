@@ -16,3 +16,16 @@ export const fetchAll = async (SQL, params = []) => {
     client.release();
   }
 };
+
+export const fetchOne = async (SQL, params = []) => {
+  const client = await pool.connect();
+
+  try {
+    const { rows: [row] } = await pool.query(SQL, params);
+    return row;
+  } catch (error) {
+    return new InternalServerError(error.message);
+  } finally {
+    client.release();
+  }
+};
